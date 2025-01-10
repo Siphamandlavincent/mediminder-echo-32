@@ -1,69 +1,63 @@
-# Welcome to your Lovable project
+# Mediminder Echo - Medical Reminder Application
 
-## Project info
+## About
+Mediminder Echo is a user-friendly medical reminder application designed by Vincent Siphamandla Khumalo. The app helps users manage their medication schedules and medical appointments through timely reminders and notifications.
 
+## Features
+- Digital clock display
+- Medication and appointment reminders
+- Audio notifications
+- Easy reminder management (add/delete)
+- User-friendly interface with tabs
+
+## How to Use
+1. **Adding a Reminder**
+   - Click on the "Add Reminder" tab
+   - Enter the reminder title
+   - Select date and time
+   - Choose reminder type (medication/appointment)
+   - Submit to set the reminder
+
+2. **Managing Reminders**
+   - View all reminders in the "View Reminders" tab
+   - Delete unwanted reminders using the delete button
+   - Receive audio and visual notifications when it's time
+
+## Access Options
+### Option 1: QR Code Scan
+- Open your phone's camera
+- Scan the QR code displayed on the screen
+- Follow the link to access the app
+
+### Option 2: Direct Link Access
+- Visit: https://lovable.dev/projects/2d42f578-9542-4828-87a1-7b43adab5596
+- No camera required
+- Works on any device with a web browser
+
+## Technical Support & Contact Information
+For technical support or inquiries about the app, please contact:
+
+**Vincent Siphamandla Khumalo**
+- Email: v.khumalo@yahoo.com
+- Phone: 0610793813
+- LinkedIn: [Siphamandla V Khumalo](https://www.linkedin.com/in/siphamandla-v-khumalo-a96b01256/)
+
+## Project Info
 **URL**: https://lovable.dev/projects/2d42f578-9542-4828-87a1-7b43adab5596
 
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/2d42f578-9542-4828-87a1-7b43adab5596) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
+## Development
+This project is built with:
 - Vite
 - TypeScript
 - React
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+## Screenshots
+![App Preview](https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d)
+*Main interface of Mediminder Echo*
 
-Simply open [Lovable](https://lovable.dev/projects/2d42f578-9542-4828-87a1-7b43adab5596) and click on Share -> Publish.
+![Reminder Setup](https://images.unsplash.com/photo-1581091226825-a6a2a5aee158)
+*Setting up a new reminder*
 
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+For deployment instructions and more technical details, please refer to the development documentation or contact the developer directly.
