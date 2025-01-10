@@ -1,6 +1,7 @@
 import { format } from "date-fns";
-import { Bell, Calendar } from "lucide-react";
+import { Bell, Calendar, Trash2 } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 interface Reminder {
   id: string;
@@ -12,9 +13,10 @@ interface Reminder {
 
 interface ReminderListProps {
   reminders: Reminder[];
+  onDelete: (id: string) => void;
 }
 
-const ReminderList = ({ reminders }: ReminderListProps) => {
+const ReminderList = ({ reminders, onDelete }: ReminderListProps) => {
   return (
     <div className="space-y-4 animate-fade-in">
       {reminders.map((reminder) => (
@@ -38,6 +40,14 @@ const ReminderList = ({ reminders }: ReminderListProps) => {
                 </p>
               </div>
             </div>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => onDelete(reminder.id)}
+              className="text-destructive hover:text-destructive/90"
+            >
+              <Trash2 className="h-5 w-5" />
+            </Button>
           </div>
         </Card>
       ))}
