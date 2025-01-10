@@ -5,6 +5,7 @@ import Clock from "@/components/Clock";
 import { useToast } from "@/components/ui/use-toast";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { v4 as uuidv4 } from "uuid";
+import { QRCodeSVG } from "qrcode.react";
 
 interface Reminder {
   id: string;
@@ -17,6 +18,7 @@ interface Reminder {
 const Index = () => {
   const [reminders, setReminders] = useState<Reminder[]>([]);
   const { toast } = useToast();
+  const currentUrl = window.location.href;
 
   const addReminder = (reminderData: Omit<Reminder, "id">) => {
     const newReminder = { ...reminderData, id: uuidv4() };
@@ -79,6 +81,19 @@ const Index = () => {
           </TabsList>
           <TabsContent value="add">
             <ReminderForm onSubmit={addReminder} />
+            <div className="mt-6 flex justify-center">
+              <div className="p-4 bg-white rounded-lg shadow-md">
+                <QRCodeSVG
+                  value={currentUrl}
+                  size={128}
+                  level="L"
+                  includeMargin={true}
+                />
+                <p className="text-xs text-center mt-2 text-gray-600">
+                  Scan to open on your phone
+                </p>
+              </div>
+            </div>
           </TabsContent>
           <TabsContent value="view">
             <ReminderList reminders={reminders} onDelete={deleteReminder} />
