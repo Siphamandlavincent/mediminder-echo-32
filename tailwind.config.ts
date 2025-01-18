@@ -73,7 +73,7 @@ export default {
         },
         "neon-pulse": {
           "0%, 100%": {
-            boxShadow: "0 0 5px #a89d32, 0 0 10px #a89d32, 0 0 15px #a89d32",
+            boxShadow: "0 0 5px #90EE90, 0 0 10px #90EE90, 0 0 15px #90EE90",
           },
           "50%": {
             boxShadow: "0 0 10px #050501, 0 0 20px #050501, 0 0 30px #050501",
@@ -88,7 +88,7 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.3s ease-out",
-        "neon-pulse": "neon-pulse 8s infinite", // Changed from 2s to 8s for slower animation
+        "neon-pulse": "neon-pulse 16s infinite", // Changed from 8s to 16s for even slower animation
         "scale-bounce": "scale-bounce 0.3s ease-in-out",
       },
     },
