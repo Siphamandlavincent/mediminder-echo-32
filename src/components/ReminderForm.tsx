@@ -43,6 +43,7 @@ const ReminderForm = ({ onSubmit }: ReminderFormProps) => {
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Enter medication name or appointment title"
           required
+          className="transition-all duration-300 focus:ring-2 focus:ring-primary/50"
         />
       </div>
 
@@ -53,7 +54,7 @@ const ReminderForm = ({ onSubmit }: ReminderFormProps) => {
             <Button
               variant="outline"
               className={cn(
-                "w-full justify-start text-left font-normal",
+                "w-full justify-start text-left font-normal transition-all duration-300 hover:bg-primary/10 hover:border-primary/50",
                 !date && "text-muted-foreground"
               )}
             >
@@ -80,10 +81,14 @@ const ReminderForm = ({ onSubmit }: ReminderFormProps) => {
           value={time}
           onChange={(e) => setTime(e.target.value)}
           required
+          className="transition-all duration-300 focus:ring-2 focus:ring-primary/50"
         />
       </div>
 
-      <Button type="submit" className="w-full bg-primary hover:bg-primary/90">
+      <Button
+        type="submit"
+        className="w-full bg-primary hover:bg-primary/90 transition-all duration-300 animate-neon-pulse hover:animate-scale-bounce"
+      >
         Add Reminder
       </Button>
     </form>

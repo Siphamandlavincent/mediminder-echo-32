@@ -22,15 +22,15 @@ const ReminderList = ({ reminders, onDelete }: ReminderListProps) => {
       {reminders.map((reminder) => (
         <Card
           key={reminder.id}
-          className="p-4 hover:shadow-lg transition-shadow"
+          className="p-4 hover:shadow-lg transition-all duration-300 hover:bg-primary/5"
         >
           <div className="flex items-start justify-between">
             <div className="flex items-start space-x-4">
               <div className="mt-1">
                 {reminder.type === "medication" ? (
-                  <Bell className="h-5 w-5 text-primary" />
+                  <Bell className="h-5 w-5 text-primary animate-neon-pulse" />
                 ) : (
-                  <Calendar className="h-5 w-5 text-secondary" />
+                  <Calendar className="h-5 w-5 text-secondary animate-neon-pulse" />
                 )}
               </div>
               <div>
@@ -44,7 +44,7 @@ const ReminderList = ({ reminders, onDelete }: ReminderListProps) => {
               variant="ghost"
               size="icon"
               onClick={() => onDelete(reminder.id)}
-              className="text-destructive hover:text-destructive/90"
+              className="text-destructive hover:text-destructive/90 transition-all duration-300 hover:animate-scale-bounce"
             >
               <Trash2 className="h-5 w-5" />
             </Button>
