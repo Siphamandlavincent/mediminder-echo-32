@@ -28,6 +28,7 @@ const Index = () => {
       description: `${reminderData.title} scheduled for ${reminderData.time}`,
     });
 
+    // Play a confirmation sound when setting a reminder
     const audio = new Audio("/notification.mp3");
     audio.play().catch((error) => console.log("Audio playback failed:", error));
   };
@@ -49,13 +50,24 @@ const Index = () => {
         reminderTime.setHours(parseInt(hours), parseInt(minutes));
 
         if (Math.abs(now.getTime() - reminderTime.getTime()) < 60000) {
+          // Play alarm sound for medication reminders
+          if (reminder.type === "medication") {
+            const alarmSound = new Audio("/alarm.mp3");
+            alarmSound.loop = true; // Make the alarm continuous
+            alarmSound.play().catch((error) => console.log("Alarm playback failed:", error));
+            
+            // Stop the alarm after 30 seconds
+            setTimeout(() => {
+              alarmSound.pause();
+              alarmSound.currentTime = 0;
+            }, 30000);
+          }
+
           toast({
             title: "Reminder!",
             description: reminder.title,
             duration: 10000,
           });
-          const audio = new Audio("/notification.mp3");
-          audio.play().catch((error) => console.log("Audio playback failed:", error));
         }
       });
     }, 60000);

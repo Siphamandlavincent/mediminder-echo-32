@@ -1,12 +1,11 @@
-import type { Config } from "tailwindcss";
-
-export default {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   darkMode: ["class"],
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
   ],
   prefix: "",
   theme: {
@@ -26,11 +25,11 @@ export default {
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "#a89d32",
-          foreground: "#FFFFFF",
+          foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
           DEFAULT: "#050501",
-          foreground: "#FFFFFF",
+          foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -60,16 +59,22 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: { height: "0" },
+          from: { height: 0 },
           to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+          to: { height: 0 },
         },
         "fade-in": {
-          "0%": { opacity: "0", transform: "translateY(10px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
+          "0%": {
+            opacity: "0",
+            transform: "translateY(10px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
         },
         "neon-pulse": {
           "0%, 100%": {
@@ -81,17 +86,17 @@ export default {
         },
         "scale-bounce": {
           "0%, 100%": { transform: "scale(1)" },
-          "50%": { transform: "scale(1.05)" },
+          "50%": { transform: "scale(0.95)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.3s ease-out",
-        "neon-pulse": "neon-pulse 16s infinite", // Changed from 8s to 16s for even slower animation
+        "neon-pulse": "neon-pulse 01s infinite", // Changed to 01 seconds
         "scale-bounce": "scale-bounce 0.3s ease-in-out",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+}
