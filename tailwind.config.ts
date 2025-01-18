@@ -25,11 +25,11 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#8B5CF6",
+          DEFAULT: "#a89d32",
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#D946EF",
+          DEFAULT: "#050501",
           foreground: "#FFFFFF",
         },
         destructive: {
@@ -73,10 +73,10 @@ export default {
         },
         "neon-pulse": {
           "0%, 100%": {
-            boxShadow: "0 0 5px #8B5CF6, 0 0 10px #8B5CF6, 0 0 15px #8B5CF6",
+            boxShadow: "0 0 5px #a89d32, 0 0 10px #a89d32, 0 0 15px #a89d32",
           },
           "50%": {
-            boxShadow: "0 0 10px #D946EF, 0 0 20px #D946EF, 0 0 30px #D946EF",
+            boxShadow: "0 0 10px #050501, 0 0 20px #050501, 0 0 30px #050501",
           },
         },
         "scale-bounce": {
